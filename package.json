@@ -1,0 +1,23 @@
+{
+  "name": "nanti-dongqilai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "难题动起来：把高考物理压轴题交给 AI 建模成 JSON，本地引擎独立模拟、核对答案，按小问播放动画",
+  "type": "module",
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "dev": "vite --port 5191",
+    "build": "vite build",
+    "start": "node serve.mjs",
+    "check": "node tools/check.ts",
+    "test": "node tests/run.ts",
+    "prompt": "node prompt/build.ts"
+  },
+  "dependencies": {
+    "katex": "^0.19.1",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}

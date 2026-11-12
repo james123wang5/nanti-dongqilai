@@ -1,0 +1,18 @@
+{
+  "spec": "v1",
+  "title": "双缝干涉：条纹间距与明暗判断",
+  "stem": "用波长 λ = 600 nm 的单色光做双缝干涉实验，双缝间距 d = 0.2 mm，双缝到屏的距离 L = 1 m。(1) 求相邻亮条纹的间距；(2) 屏上距中央亮纹 4.5 mm 的 P 点是亮纹还是暗纹？(3) P 点到两缝的光程差是波长的几倍？",
+  "params": { "lam": [6e-7, "m", "波长"], "d": [2e-4, "m", "缝间距"], "L": [1, "m", "缝到屏距离"] },
+  "scene": { "surfaces": [], "bodies": [], "slit": { "lambda": "lam", "d": "d", "L": "L", "probes": [{ "id": "P", "x": 4.5e-3 }] } },
+  "asks": [
+    { "id": "1", "text": "相邻亮纹间距", "expr": "val(dx)", "answer": "L*lam/d", "unit": "m" },
+    { "id": "2", "text": "P 点是暗纹", "option": { "label": "2", "text": "P 点是暗纹", "correct": true, "claim": "val(dark_P)==1" } },
+    { "id": "3", "text": "P 点光程差是波长的几倍", "expr": "val(order_P)", "answer": 1.5 }
+  ],
+  "idea": "两束光到屏上某点的光程差是波长的整数倍处是亮纹，半波长的奇数倍处是暗纹；相邻亮纹间距 Δx = Lλ/d。",
+  "solution": {
+    "1": [{ "say": "相邻亮纹对应光程差相差一个波长。", "tex": "\\Delta x=\\dfrac{L\\lambda}{d}=\\dfrac{1\\times6\\times10^{-7}}{2\\times10^{-4}}=3\\ \\mathrm{mm}" }],
+    "2": [{ "say": "4.5 mm 是 1.5 个条纹间距，光程差是 1.5 个波长，是暗纹。", "tex": "\\delta=\\dfrac{d\\,x}{L}=1.5\\lambda" }],
+    "3": [{ "say": "光程差除以波长就是 1.5。", "tex": "\\dfrac{\\delta}{\\lambda}=1.5" }]
+  }
+}

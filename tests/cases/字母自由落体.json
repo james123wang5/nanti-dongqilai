@@ -1,0 +1,77 @@
+{
+  "spec": "v1",
+  "title": "自编：从高 H 处自由落下",
+  "constants": {
+    "g": 10
+  },
+  "params": {
+    "H": [
+      2,
+      "m",
+      "高度为 H，数值任取"
+    ],
+    "m": [
+      3,
+      "kg",
+      "质量为 m，数值任取"
+    ]
+  },
+  "samples": [
+    {
+      "H": 4.5,
+      "m": 5
+    }
+  ],
+  "scene": {
+    "surfaces": [
+      {
+        "id": "地",
+        "kind": "ground",
+        "y": 0
+      }
+    ],
+    "bodies": [
+      {
+        "id": "球",
+        "m": "m",
+        "pos": [
+          0,
+          "H"
+        ],
+        "vel": [
+          0,
+          0
+        ]
+      }
+    ],
+    "tMax": 3
+  },
+  "asks": [
+    {
+      "id": "1",
+      "text": "落地前速率",
+      "at": {
+        "event": "land",
+        "body": "球"
+      },
+      "expr": "v(球)",
+      "answer": "sqrt(2*g*H)"
+    }
+  ],
+  "solution": {
+    "1": [
+      {
+        "say": "重力势能转化为动能。",
+        "tex": "v=\\sqrt{2gH}",
+        "check": {
+          "at": {
+            "event": "land",
+            "body": "球"
+          },
+          "expr": "KE(球)",
+          "value": "m*g*H"
+        }
+      }
+    ]
+  }
+}

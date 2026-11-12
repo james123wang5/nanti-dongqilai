@@ -1,0 +1,27 @@
+{
+  "spec": "v1",
+  "title": "炮弹在最高点爆炸：动量守恒",
+  "stem": "质量 m = 2 kg 的炮弹以 v₀ = 20 m/s、与水平成 45° 的速度从地面射出，到达最高点时炸成质量相等的两块，其中一块恰好沿原路返回。不计空气阻力，g = 10 m/s²。求：(1) 爆炸后另一块的速度；(2) 另一块的落地点到发射点的距离；(3) 爆炸释放的能量。",
+  "params": { "g": [10, "m/s²", "重力加速度"], "v0": [20, "m/s", "初速度"], "m": [2, "kg", "炮弹质量"] },
+  "scene": {
+    "surfaces": [{ "id": "地面", "kind": "ground", "y": 0 }],
+    "bodies": [
+      { "id": "炮弹", "kind": "ball", "m": "m", "pos": [0, 0], "vel": ["v0*cos(pi/4)", "v0*sin(pi/4)"] },
+      { "id": "甲", "kind": "ball", "m": "m/2", "from": "炮弹", "vel": ["-v0*cos(pi/4)", 0] },
+      { "id": "乙", "kind": "ball", "m": "m/2", "from": "炮弹" }
+    ],
+    "splits": [{ "on": "炮弹", "when": { "event": "when", "expr": "vy(炮弹)", "dir": -1 } }],
+    "tMax": 10
+  },
+  "asks": [
+    { "id": "1", "text": "爆炸后乙的速度", "at": { "event": "split", "name": "炮弹" }, "expr": "v(乙)", "answer": "3*v0*cos(pi/4)", "unit": "m/s" },
+    { "id": "2", "text": "乙落地点到发射点的距离", "at": { "event": "land", "body": "乙" }, "expr": "x(乙)", "answer": "4*v0^2*cos(pi/4)*sin(pi/4)/g", "unit": "m" },
+    { "id": "3", "text": "爆炸释放的能量", "at": { "event": "split", "name": "炮弹" }, "expr": "Q(爆炸)", "answer": "2*m*(v0*cos(pi/4))^2", "unit": "J" }
+  ],
+  "idea": "爆炸时间极短，内力远大于重力，水平方向动量守恒；最高点炮弹只有水平速度。两块此后都做平抛，下落时间和上升时间相同。",
+  "solution": {
+    "1": [{ "say": "最高点速度水平：$v_x=v_0\\cos45^\\circ$。甲沿原路返回，速度 $-v_x$。动量守恒。", "tex": "mv_x=\\tfrac m2(-v_x)+\\tfrac m2 v_乙\\Rightarrow v_乙=3v_x" }],
+    "2": [{ "say": "上升时间 $t=v_x/g$（竖直分速度也等于 $v_x$），上升时水平走 $v_xt$；乙平抛下落同样用时 $t$，水平再走 $3v_xt$。", "tex": "x=v_xt+3v_xt=\\dfrac{4v_x^2}{g}" }],
+    "3": [{ "say": "爆炸后动能减爆炸前动能。", "tex": "\\Delta E=\\tfrac12\\cdot\\tfrac m2v_x^2+\\tfrac12\\cdot\\tfrac m2(3v_x)^2-\\tfrac12mv_x^2=2mv_x^2" }]
+  }
+}

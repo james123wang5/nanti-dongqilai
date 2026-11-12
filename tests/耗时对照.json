@@ -1,0 +1,2318 @@
+{
+  "说明": "同一机器、Node 独立进程，按目录排序，每题 solveProblem(P) 默认 sample=0 各测一次；不与其他测试并发。仅计 solveProblem，不计导入和读 JSON。优化前为发现退化时的额外测量，最终对照使用 updatedMs。单次毫秒级变化不能证明稳定回归。山东17从完整计算变为数据错误中止，其耗时下降不视作等价提速。",
+  "baselineCommit": "1dc9367",
+  "nodeVersion": "v22.22.2",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "measuredAt": "2026-11-08T23:24:57.192549+00:00",
+  "engineSha256": "644e33aaaae974bb4266243a53c4cae9dd0193156f577e0a7e3d72283bfc944a",
+  "count": 60,
+  "baselineTotalMs": 162148.2448739999,
+  "updatedTotalMs": 95925.01183100001,
+  "comparableBaselineMs": 158093.12912399988,
+  "comparableUpdatedMs": 94592.22129000002,
+  "cases": [
+    {
+      "id": "00-板块示例",
+      "baselineMs": 23.605374999999995,
+      "beforeOptimizationMs": 25.725916000000012,
+      "updatedMs": 23.790582999999998,
+      "deltaMs": 0.18520800000000293,
+      "deltaPercent": 0.784600964822643,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          },
+          {
+            "id": "4",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          },
+          {
+            "id": "4",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2024-山东-17",
+      "baselineMs": 8184.449791000001,
+      "beforeOptimizationMs": 15831.543375,
+      "updatedMs": 7747.8475,
+      "deltaMs": -436.60229100000106,
+      "deltaPercent": -5.3345344176967044,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2(i)",
+            "ok": true
+          },
+          {
+            "id": "2(ii)",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2(i)",
+            "ok": true
+          },
+          {
+            "id": "2(ii)",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2024-新课标-25",
+      "baselineMs": 5560.213667,
+      "beforeOptimizationMs": 5636.844708999999,
+      "updatedMs": 3028.226458000001,
+      "deltaMs": -2531.987208999999,
+      "deltaPercent": -45.53758831297083,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1a",
+            "ok": true
+          },
+          {
+            "id": "1b",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1a",
+            "ok": true
+          },
+          {
+            "id": "1b",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2024-浙江1月-20",
+      "baselineMs": 1782.896917,
+      "beforeOptimizationMs": 1731.520209000002,
+      "updatedMs": 1021.997542000001,
+      "deltaMs": -760.899374999999,
+      "deltaPercent": -42.677698735400256,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1①",
+            "ok": true
+          },
+          {
+            "id": "1②",
+            "ok": true
+          },
+          {
+            "id": "1③",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1①",
+            "ok": true
+          },
+          {
+            "id": "1②",
+            "ok": true
+          },
+          {
+            "id": "1③",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2024-湖南-15",
+      "baselineMs": 4079.4093749999993,
+      "beforeOptimizationMs": 4172.698250000001,
+      "updatedMs": 1986.435374999999,
+      "deltaMs": -2092.974,
+      "deltaPercent": -51.30580943472977,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1a",
+            "ok": true
+          },
+          {
+            "id": "1b",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1a",
+            "ok": true
+          },
+          {
+            "id": "1b",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2025-山东-17",
+      "baselineMs": 4055.115750000001,
+      "beforeOptimizationMs": 1848.8682079999999,
+      "updatedMs": 1332.7905409999985,
+      "deltaMs": -2722.3252090000024,
+      "deltaPercent": -67.13310733485233,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1a",
+            "ok": true
+          },
+          {
+            "id": "1b",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "error": "在给定范围里找不到有效条件。试算 {\"xa\":-2.75} 失败：单侧支撑失效：物体 方形物体 在 t=0.3244282 s 失去支撑 地面（N≈9.947598e-13 N）；小球 位于轨道 通道3，s=0.4514200 m，圆弧角=64.66116°，R=0.4000000 m。继续运动的试算 t=0.32482 s 要求 N=-0.1529891 N，即支撑需向下拉 0.1529891 N，普通地面/木板只能推、不能拉。若题目未给轨道形状，请改用更缓、半径更大的形状，使小球对宿主的向上作用力不超过宿主及其上物体的重力，并重新检查全程 N≥0；若题目明确说宿主被卡住/固定，请给宿主写 locked:true（外界装置完全固定），或把轨道写成固定轨道（删去 surfaces.on），不可为通过校验擅自锁定。需要离地后的耦合运动时，请用 ode 自写方程或 script 演示。请检查事件名字、n、轨道接续、初始状态及 tMax/until；不要把答案写回条件"
+      }
+    },
+    {
+      "id": "2025-湖北-15",
+      "baselineMs": 35759.247833,
+      "beforeOptimizationMs": 38478.184292000005,
+      "updatedMs": 14076.662042,
+      "deltaMs": -21682.585791,
+      "deltaPercent": -60.63490454905621,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2025-黑吉辽蒙-13",
+      "baselineMs": 11.734333000000333,
+      "beforeOptimizationMs": 14.811583999995491,
+      "updatedMs": 6.642374999999447,
+      "deltaMs": -5.091958000000886,
+      "deltaPercent": -43.39367222662542,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-河南-15",
+      "baselineMs": 2257.2842080000046,
+      "beforeOptimizationMs": 2236.941000000006,
+      "updatedMs": 2172.1610419999997,
+      "deltaMs": -85.12316600000486,
+      "deltaPercent": -3.7710433492743722,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2a",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024北京20-电磁枪",
+      "baselineMs": 101.06554199999664,
+      "beforeOptimizationMs": 98.96912500000326,
+      "updatedMs": 103.59687499999927,
+      "deltaMs": 2.5313330000026326,
+      "deltaPercent": 2.504644956045174,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷13-差压阀",
+      "baselineMs": 144.55641599999944,
+      "beforeOptimizationMs": 140.28600000000733,
+      "updatedMs": 143.2075420000001,
+      "deltaMs": -1.3488739999993413,
+      "deltaPercent": -0.9331125088210174,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷13-粒子团",
+      "baselineMs": 166.38887499999691,
+      "beforeOptimizationMs": 141.0346669999999,
+      "updatedMs": 159.45379200000025,
+      "deltaMs": -6.935082999996666,
+      "deltaPercent": -4.167996808678943,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷14-带电小球",
+      "baselineMs": 21.31233400000201,
+      "beforeOptimizationMs": 20.49358399999619,
+      "updatedMs": 21.73541699999987,
+      "deltaMs": 0.4230829999978596,
+      "deltaPercent": 1.9851556380348565,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2a",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2a",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷15-交变电压",
+      "baselineMs": 152.35024999999587,
+      "beforeOptimizationMs": 150.09258299999055,
+      "updatedMs": 153.33591700000034,
+      "deltaMs": 0.9856670000044687,
+      "deltaPercent": 0.6469743239702563,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷15-转动棒",
+      "baselineMs": 2.1325830000059796,
+      "beforeOptimizationMs": 2.2442080000037095,
+      "updatedMs": 2.2426250000025902,
+      "deltaMs": 0.11004199999661068,
+      "deltaPercent": 5.160033630405107,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024卷19-三区域",
+      "baselineMs": 6583.859417000007,
+      "beforeOptimizationMs": 6472.998124999998,
+      "updatedMs": 6481.567708999999,
+      "deltaMs": -102.29170800000793,
+      "deltaPercent": -1.5536739398761044,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": null
+          },
+          {
+            "id": "3a",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": null
+          },
+          {
+            "id": "3a",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024山东18-摆线",
+      "baselineMs": 234.69991699999082,
+      "beforeOptimizationMs": 211.8536669999885,
+      "updatedMs": 198.92262499999924,
+      "deltaMs": -35.777291999991576,
+      "deltaPercent": -15.24384518635896,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024河北8-椭圆轨道",
+      "baselineMs": 50.774915999994846,
+      "beforeOptimizationMs": 43.06891600000381,
+      "updatedMs": 41.80358400000114,
+      "deltaMs": -8.971331999993708,
+      "deltaPercent": -17.66882686717713,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "A",
+            "ok": null
+          },
+          {
+            "id": "C",
+            "ok": null
+          },
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "A",
+            "ok": null
+          },
+          {
+            "id": "C",
+            "ok": null
+          },
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2024湖南14-螺旋",
+      "baselineMs": 112.12600000000384,
+      "beforeOptimizationMs": 107.09574999999313,
+      "updatedMs": 113.83333300000231,
+      "deltaMs": 1.7073329999984708,
+      "deltaPercent": 1.5226914364183262,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2t",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2t",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025卷13-盖玻片",
+      "baselineMs": 46.33929099999659,
+      "beforeOptimizationMs": 28.95579199999338,
+      "updatedMs": 24.731500000001688,
+      "deltaMs": -21.607790999994904,
+      "deltaPercent": -46.629524392154586,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": false
+          },
+          {
+            "id": "2",
+            "ok": false
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": false
+          },
+          {
+            "id": "2",
+            "ok": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025卷14-磁屏蔽",
+      "baselineMs": 9599.22920799999,
+      "beforeOptimizationMs": 8723.021083,
+      "updatedMs": 9234.108833000006,
+      "deltaMs": -365.12037499998405,
+      "deltaPercent": -3.8036426372202157,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": null
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": null
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025山东18-线框",
+      "baselineMs": 1873.485249999998,
+      "beforeOptimizationMs": 1858.6182919999992,
+      "updatedMs": 1852.5443749999977,
+      "deltaMs": -20.940875000000233,
+      "deltaPercent": -1.1177496593581537,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025新课标13-液滴",
+      "baselineMs": 48.285541999997804,
+      "beforeOptimizationMs": 64.03891700001259,
+      "updatedMs": 48.3114160000041,
+      "deltaMs": 0.025874000006297138,
+      "deltaPercent": 0.053585398308873315,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025新课标14-防滑带",
+      "baselineMs": 32.02691699999559,
+      "beforeOptimizationMs": 25.596374999993714,
+      "updatedMs": 19.686540999995486,
+      "deltaMs": -12.340376000000106,
+      "deltaPercent": -38.53126418631492,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025新课标15-组合场",
+      "baselineMs": 8770.521624999994,
+      "beforeOptimizationMs": 8853.293625000006,
+      "updatedMs": 8798.525042000001,
+      "deltaMs": 28.003417000007175,
+      "deltaPercent": 0.31929021097427823,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025湖北10-五边形",
+      "baselineMs": 58.426250000004075,
+      "beforeOptimizationMs": 57.18325000000186,
+      "updatedMs": 68.06483299999672,
+      "deltaMs": 9.63858299999265,
+      "deltaPercent": 16.49700776618725,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025湖北14-双磁场",
+      "baselineMs": 18.64220899999782,
+      "beforeOptimizationMs": 17.745209000000614,
+      "updatedMs": 22.183624999997846,
+      "deltaMs": 3.5414160000000265,
+      "deltaPercent": 18.996761596227362,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025陕晋宁青12-轮胎",
+      "baselineMs": 9.72266599998693,
+      "beforeOptimizationMs": 12.00625000000582,
+      "updatedMs": 10.081582999999227,
+      "deltaMs": 0.35891700001229765,
+      "deltaPercent": 3.6915492110166093,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2025陕晋宁青6-线框",
+      "baselineMs": 283.1411250000092,
+      "beforeOptimizationMs": 263.15870800000266,
+      "updatedMs": 292.4895000000033,
+      "deltaMs": 9.348374999994121,
+      "deltaPercent": 3.3016662627139794,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷13-实验舱",
+      "baselineMs": 20.051166999997804,
+      "beforeOptimizationMs": 18.524958000009065,
+      "updatedMs": 22.40899999999965,
+      "deltaMs": 2.357833000001847,
+      "deltaPercent": 11.7590811547383,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷13-洛伦兹力演示仪",
+      "baselineMs": 6834.355250000008,
+      "beforeOptimizationMs": 6639.922166999997,
+      "updatedMs": 7198.315082999994,
+      "deltaMs": 363.95983299998625,
+      "deltaPercent": 5.325445044724384,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷14-小球打板",
+      "baselineMs": 63033.51133299999,
+      "beforeOptimizationMs": 56519.026666000005,
+      "updatedMs": 28132.089374999996,
+      "deltaMs": -34901.42195799999,
+      "deltaPercent": -55.36962993163927,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷14-气动装置",
+      "baselineMs": 19.648416999989422,
+      "beforeOptimizationMs": 12.678665999992518,
+      "updatedMs": 10.929082999995444,
+      "deltaMs": -8.719333999993978,
+      "deltaPercent": -44.37677600184622,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "2b",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷15-电子偏转",
+      "baselineMs": 167.4772079999966,
+      "beforeOptimizationMs": 75.76387500000419,
+      "updatedMs": 64.52420900001016,
+      "deltaMs": -102.95299899998645,
+      "deltaPercent": -61.472841725417666,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026卷6-电磁泵",
+      "baselineMs": 242.00854199999594,
+      "beforeOptimizationMs": 162.42804099997738,
+      "updatedMs": 147.9229170000035,
+      "deltaMs": -94.08562499999243,
+      "deltaPercent": -38.87698517682653,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "C",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "C",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026四川15-多区磁场",
+      "baselineMs": 44.32808400000795,
+      "beforeOptimizationMs": 40.36120800001663,
+      "updatedMs": 62.59945799999696,
+      "deltaMs": 18.27137399998901,
+      "deltaPercent": 41.21850608292868,
+      "slowerOver30Percent": true,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026广东14-弹跳机器人",
+      "baselineMs": 45.25045799999498,
+      "beforeOptimizationMs": 39.106165999983205,
+      "updatedMs": 37.020166999995126,
+      "deltaMs": -8.230290999999852,
+      "deltaPercent": -18.188304304015585,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026广东15-带电摆",
+      "baselineMs": 75.8260420000006,
+      "beforeOptimizationMs": 76.68325000000186,
+      "updatedMs": 64.73495900000853,
+      "deltaMs": -11.091082999992068,
+      "deltaPercent": -14.627010335040277,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026湖南14-三触点",
+      "baselineMs": 392.32841700001154,
+      "beforeOptimizationMs": 390.9483749999781,
+      "updatedMs": 347.67408300000534,
+      "deltaMs": -44.6543340000062,
+      "deltaPercent": -11.381876016389832,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "真题-2026湖南15-杆球",
+      "baselineMs": 128.67312500000116,
+      "beforeOptimizationMs": 112.05312500000582,
+      "updatedMs": 61.92195800000627,
+      "deltaMs": -66.7511669999949,
+      "deltaPercent": -51.87654143007274,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-RC充电",
+      "baselineMs": 20.39541699999245,
+      "beforeOptimizationMs": 22.810708000004524,
+      "updatedMs": 22.18345799999952,
+      "deltaMs": 1.7880410000070697,
+      "deltaPercent": 8.766876401731485,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-光的折射",
+      "baselineMs": 5.137125000008382,
+      "beforeOptimizationMs": 3.4615409999969415,
+      "updatedMs": 3.2643329999991693,
+      "deltaMs": -1.8727920000092126,
+      "deltaPercent": -36.4560332872211,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-动态电路",
+      "baselineMs": 5.198709000018425,
+      "beforeOptimizationMs": 6.631333000026643,
+      "updatedMs": 8.039332999993348,
+      "deltaMs": 2.840623999974923,
+      "deltaPercent": 54.640950281403626,
+      "slowerOver30Percent": true,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-半圆砖全反射",
+      "baselineMs": 17.793791000003694,
+      "beforeOptimizationMs": 14.823000000003958,
+      "updatedMs": 11.371916000003694,
+      "deltaMs": -6.421875,
+      "deltaPercent": -36.090538547961295,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-卫星变轨",
+      "baselineMs": 265.0201669999806,
+      "beforeOptimizationMs": 235.49016699998174,
+      "updatedMs": 125.91608300000371,
+      "deltaMs": -139.10408399997687,
+      "deltaPercent": -52.48811272539386,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-双星",
+      "baselineMs": 59.72745899998699,
+      "beforeOptimizationMs": 36.899124999996275,
+      "updatedMs": 34.5951250000071,
+      "deltaMs": -25.132333999979892,
+      "deltaPercent": -42.07835796260036,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-回旋加速器",
+      "baselineMs": 369.1149999999907,
+      "beforeOptimizationMs": 299.71012500001234,
+      "updatedMs": 173.42191699999967,
+      "deltaMs": -195.69308299999102,
+      "deltaPercent": -53.01683296533491,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-圆锥摆",
+      "baselineMs": 36.95900000000256,
+      "beforeOptimizationMs": 33.9352910000016,
+      "updatedMs": 25.871666999999434,
+      "deltaMs": -11.087333000003127,
+      "deltaPercent": -29.999007007771745,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-导体棒",
+      "baselineMs": 63.28987499998766,
+      "beforeOptimizationMs": 52.425832999986596,
+      "updatedMs": 42.155375000002095,
+      "deltaMs": -21.134499999985565,
+      "deltaPercent": -33.39317702869485,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-平行板偏转",
+      "baselineMs": 52.849540999974124,
+      "beforeOptimizationMs": 34.38837499998044,
+      "updatedMs": 18.679415999999037,
+      "deltaMs": -34.17012499997509,
+      "deltaPercent": -64.65548111381293,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-斜边界磁场",
+      "baselineMs": 84.14745799999218,
+      "beforeOptimizationMs": 29.847915999998804,
+      "updatedMs": 38.27545800000371,
+      "deltaMs": -45.871999999988475,
+      "deltaPercent": -54.513827381443576,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-机械波",
+      "baselineMs": 11.056375000014668,
+      "beforeOptimizationMs": 13.141957999992883,
+      "updatedMs": 6.740791999996873,
+      "deltaMs": -4.315583000017796,
+      "deltaPercent": -39.03253100597683,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-氢原子能级",
+      "baselineMs": 3.3363330000138376,
+      "beforeOptimizationMs": 2.3908749999827705,
+      "updatedMs": 8.543375000008382,
+      "deltaMs": 5.207041999994544,
+      "deltaPercent": 156.0708118755816,
+      "slowerOver30Percent": true,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-水波干涉",
+      "baselineMs": 5.9597910000011325,
+      "beforeOptimizationMs": 4.34541700000409,
+      "updatedMs": 3.469874999995227,
+      "deltaMs": -2.4899160000059055,
+      "deltaPercent": -41.778579148252554,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-汽缸加热",
+      "baselineMs": 13.368625000002794,
+      "beforeOptimizationMs": 10.679084000003058,
+      "updatedMs": 8.440875000000233,
+      "deltaMs": -4.927750000002561,
+      "deltaPercent": -36.86055970603956,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-滑雪",
+      "baselineMs": 31.79929200001061,
+      "beforeOptimizationMs": 20.572165999998106,
+      "updatedMs": 14.430416000002879,
+      "deltaMs": -17.36887600000773,
+      "deltaPercent": -54.62032299336078,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-磁场圆周",
+      "baselineMs": 44.2276669999992,
+      "beforeOptimizationMs": 40.817582999996375,
+      "updatedMs": 20.249874999994063,
+      "deltaMs": -23.977792000005138,
+      "deltaPercent": -54.21446263490582,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-远距离输电",
+      "baselineMs": 19.664457999984734,
+      "beforeOptimizationMs": 14.528707999998005,
+      "updatedMs": 13.951499999995576,
+      "deltaMs": -5.7129579999891575,
+      "deltaPercent": -29.05220169299145,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-连接体",
+      "baselineMs": 2.0448749999923166,
+      "beforeOptimizationMs": 5.998084000020754,
+      "updatedMs": 2.6187499999941792,
+      "deltaMs": 0.5738750000018626,
+      "deltaPercent": 28.06406259570971,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "1",
+            "ok": true
+          },
+          {
+            "id": "2",
+            "ok": true
+          },
+          {
+            "id": "3",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "示例-选择题",
+      "baselineMs": 10.652290999976685,
+      "beforeOptimizationMs": 6.626583000004757,
+      "updatedMs": 5.671875,
+      "deltaMs": -4.980415999976685,
+      "deltaPercent": -46.75441179730807,
+      "slowerOver30Percent": false,
+      "slowerOver2Seconds": false,
+      "baselineResult": {
+        "asks": [
+          {
+            "id": "A",
+            "ok": true
+          },
+          {
+            "id": "B",
+            "ok": true
+          },
+          {
+            "id": "C",
+            "ok": true
+          },
+          {
+            "id": "D",
+            "ok": true
+          }
+        ]
+      },
+      "updatedResult": {
+        "asks": [
+          {
+            "id": "A",
+            "ok": true
+          },
+          {
+            "id": "B",
+            "ok": true
+          },
+          {
+            "id": "C",
+            "ok": true
+          },
+          {
+            "id": "D",
+            "ok": true
+          }
+        ]
+      }
+    }
+  ]
+}

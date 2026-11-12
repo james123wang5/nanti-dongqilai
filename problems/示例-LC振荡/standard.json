@@ -1,0 +1,20 @@
+{
+  "spec": "v1",
+  "title": "LC 振荡：电场能和磁场能来回转化",
+  "stem": "电感 L = 10 mH、电容 C = 1 μF 组成的 LC 回路，电容先充电到 U₀ = 10 V 后接通。(1) 振荡周期是多少？(2) 回路中电流的最大值是多少？(3) 从接通开始，经过多长时间电容第一次放电完毕？此时磁场能是否最大？",
+  "params": { "L": [0.01, "H", "电感"], "C": [1e-6, "F", "电容"], "U0": [10, "V", "初始电压"] },
+  "scene": { "surfaces": [], "bodies": [], "lc": { "L": "L", "C": "C", "U0": "U0" } },
+  "asks": [
+    { "id": "1", "text": "振荡周期", "expr": "val(T)", "answer": "2*pi*sqrt(L*C)", "unit": "s" },
+    { "id": "2", "text": "电流最大值", "at": { "event": "mark", "name": "放电完毕" }, "expr": "val(I)", "answer": "U0*sqrt(C/L)", "unit": "A" },
+    { "id": "3a", "text": "第一次放电完毕的时刻", "at": { "event": "mark", "name": "放电完毕" }, "expr": "t", "answer": "pi*sqrt(L*C)/2", "unit": "s" },
+    { "id": "3b", "text": "放电完毕时磁场能最大", "option": { "label": "3b", "text": "电容放电完毕时，磁场能等于总能量（最大）", "correct": true, "claim": "approx(val(EL,t1),val(E,t1),1e-6,0)" }, "times": { "t1": { "event": "mark", "name": "放电完毕" } } }
+  ],
+  "idea": "电容放电时电场能变成线圈的磁场能，电流最大时电荷为零；接着线圈给电容反向充电，能量又回到电场。一个周期里来回两次。",
+  "solution": {
+    "1": [{ "say": "LC 回路的固有周期。", "tex": "T=2\\pi\\sqrt{LC}" }],
+    "2": [{ "say": "电场能全部变成磁场能时电流最大。", "tex": "\\tfrac12CU_0^2=\\tfrac12LI_m^2\\Rightarrow I_m=U_0\\sqrt{C/L}" }],
+    "3a": [{ "say": "从电荷最多到电荷为零是四分之一个周期。", "tex": "t=\\tfrac T4" }],
+    "3b": [{ "say": "电荷为零时电场能为零，能量全在磁场里。", "tex": "E_L=E" }]
+  }
+}

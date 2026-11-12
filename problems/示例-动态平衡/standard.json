@@ -1,0 +1,35 @@
+{
+  "spec": "v1",
+  "title": "动态平衡：OA 方向不变，OB 缓慢转动",
+  "stem": "重 G = 10 N 的物体用两根轻绳挂在结点 O 上，绳 OA 与竖直方向成 30° 且方向保持不变。保持 O 点位置不动，使绳 OB 从水平方向开始绕 O 缓慢逆时针转到竖直方向。求：(1) 开始时 OA、OB 的拉力；(2) OB 拉力的最小值，以及此时 OB 的方向；(3) 转动过程中 OA 的拉力如何变化。",
+  "constants": { "g": 10 },
+  "params": { "G": [10, "N", "物重"] },
+  "scene": {
+    "surfaces": [], "bodies": [],
+    "statics": {
+      "duration": 1,
+      "points": [
+        { "id": "A", "at": ["-sin(pi/6)", "cos(pi/6)"], "fixed": true },
+        { "id": "B", "at": ["cos(pi/2*t)", "sin(pi/2*t)"], "fixed": true },
+        { "id": "O", "at": [0, 0], "m": "G/g", "look": "knot" }
+      ],
+      "ropes": [{ "id": "OA", "a": "O", "b": "A" }, { "id": "OB", "a": "O", "b": "B" }],
+      "triangle": "O"
+    }
+  },
+  "asks": [
+    { "id": "1a", "text": "开始时 OA 的拉力", "at": { "event": "start" }, "expr": "val(T_OA)", "answer": "G/cos(pi/6)", "unit": "N" },
+    { "id": "1b", "text": "开始时 OB 的拉力", "at": { "event": "start" }, "expr": "val(T_OB)", "answer": "G*tan(pi/6)", "unit": "N" },
+    { "id": "2a", "text": "OB 拉力的最小值", "at": { "event": "mark", "name": "T_OB 最小" }, "expr": "val(T_OB)", "answer": "G*sin(pi/6)", "unit": "N" },
+    { "id": "2b", "text": "此时 OB 与水平方向的夹角", "at": { "event": "mark", "name": "T_OB 最小" }, "expr": "val(ang_OB)", "answer": 30, "unit": "°" },
+    { "id": "3", "text": "OA 的拉力一直减小", "option": { "label": "3", "text": "转动过程中 OA 的拉力一直减小", "correct": true, "claim": "val(T_OA,t1) < val(T_OA,t0) && val(T_OA,t2) < val(T_OA,t1)" }, "times": { "t0": { "event": "start" }, "t1": { "event": "mark", "name": "T_OB 最小" }, "t2": { "event": "end" } } }
+  ],
+  "idea": "结点 O 受三个力平衡：重力大小方向都不变，OA 的方向不变，OB 的方向在变。把三个力首尾相接成矢量三角形，OB 那条边从固定点出发、终点在 OA 方向的直线上滑动，它最短的时候垂直于 OA。",
+  "solution": {
+    "1a": [{ "say": "开始时 OB 水平。竖直方向只有 OA 的竖直分量和重力平衡。", "tex": "T_{OA}\\cos30^\\circ=G\\ \\Rightarrow\\ T_{OA}=\\dfrac{G}{\\cos30^\\circ}" }],
+    "1b": [{ "say": "水平方向 OB 的拉力和 OA 的水平分量平衡。", "tex": "T_{OB}=T_{OA}\\sin30^\\circ=G\\tan30^\\circ" }],
+    "2a": [{ "say": "画矢量三角形：$G$ 竖直向下，$T_{OA}$ 方向不变，$T_{OB}$ 从 $G$ 的末端连到 $T_{OA}$ 所在直线上。点到直线的距离最短，所以 $T_{OB}$ 垂直于 $OA$ 时最小。", "tex": "T_{OB\\min}=G\\sin30^\\circ" }],
+    "2b": [{ "say": "OA 与水平方向成 120°，OB 与它垂直，所以 OB 与水平方向成 30°。", "tex": "\\varphi=30^\\circ" }],
+    "3": [{ "say": "三角形里 $T_{OA}$ 那条边随着 $T_{OB}$ 的终点向上滑而一直变短。", "tex": "T_{OA}\\ \\text{一直减小}" }]
+  }
+}
